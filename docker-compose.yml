@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  api:
+    build: 
+      context: .
+      dockerfile: ./docker/challenge.dockerfile
+    env_file:
+      - .env
+    environment:
+      - MAILCATCHER_PORT=1025
+    container_name: challenge_api
+    image: challenge_api
+    command: bundle exec shoryuken -R -C config/shoryuken.yml
+    volumes:
+      - ./:/var/www/api
+    ports:
+      - 3030:3030
+
+  mailcatcher:
+    image: schickling/mailcatcher
+    container_name: mailcatcher
+    ports:
+    - "1080:1080"
+    - "1025:1025"
+    depends_on:
+      - api
