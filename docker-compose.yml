@@ -5,8 +5,6 @@ services:
     build: 
       context: .
       dockerfile: ./docker/challenge.dockerfile
-    env_file:
-      - .env
     environment:
       - MAILCATCHER_PORT=1025
     container_name: challenge_api
