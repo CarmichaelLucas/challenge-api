@@ -1,4 +1,6 @@
-require "rails_helper"
+# fronzen_string_literal: true
+
+require 'rails_helper'
 
 RSpec.describe ClientMailer, type: :mailer do 
   let(:mail) { described_class.with(response: response).welcome.deliver_now! }
