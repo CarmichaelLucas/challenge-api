@@ -1,24 +1,10 @@
-# README
+# Configurando o arquivo .env
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Insira as seguintes variaveis de ambiente em um arquivo na raiz do projeto, com o nome de `.env`. E será preciso criar uma fila no serviço da AWS SQS.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+AWS_ACCESS_KEY_ID=your_access_key_id
+AWS_SECRET_ACCESS_KEY=your_secret_access_key
+AWS_REGION=your_region
+AWS_QUEUE_URL=your_queue_url
+```

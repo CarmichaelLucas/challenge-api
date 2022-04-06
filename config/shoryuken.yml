@@ -1,4 +1,8 @@
 aws: 
+  access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+  region: <%= ENV['AWS_REGION'] %>
+  sqs_endpoint: <%= ENV['AWS_QUEUE_URL'] %>
   receive_message:
     attribute_names:
       -  ApproximateReceiveCount
